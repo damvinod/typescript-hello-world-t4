@@ -1,30 +1,13 @@
-export default function HomePage() {
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
-      <div className="max-w-2xl mx-auto text-center">
-        <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Hello World! 👋</h1>
-
-          <p className="text-lg text-gray-600 mb-6">TypeScript Hello World - ECS Ready</p>
-
-          <div className="bg-gray-50 rounded-lg p-4 mb-6">
-            <h2 className="text-sm font-semibold text-gray-700 mb-2">System Info</h2>
-            <div className="text-sm text-gray-600 space-y-1">
-              <p>Runtime: Next.js with TypeScript</p>
-              <p>Environment: {process.env.NODE_ENV || "development"}</p>
-              <p>Port: {process.env.PORT || "3000"}</p>
-            </div>
-          </div>
-
-          <div className="flex gap-4 justify-center">
-            <a
-              href="/api/health"
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Health Check
-            </a>
-            <div className="bg-green-100 text-green-700 px-4 py-2 rounded-lg">ECS Ready ✅</div>
-          </div>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600">
+      <div className="text-center text-white p-8 rounded-lg bg-white/10 backdrop-blur-sm">
+        <h1 className="text-4xl font-bold mb-4">🚀 TypeScript Hello World</h1>
+        <p className="text-lg mb-4">This is running on Next.js for v0 compatibility</p>
+        <p className="text-sm opacity-80">For the pure Node.js TypeScript server, check the src/index.ts file</p>
+        <div className="mt-6 space-y-2 text-sm">
+          <div>Node Version: {process.version}</div>
+          <div>Environment: {process.env.NODE_ENV || "development"}</div>
         </div>
       </div>
     </div>
