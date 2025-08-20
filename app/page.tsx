@@ -5,7 +5,7 @@ export default function HomePage() {
         <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Hello World! 👋</h1>
 
-          <p className="text-lg text-gray-600 mb-6">Welcome to your TypeScript Hello World application</p>
+          <p className="text-lg text-gray-600 mb-6">TypeScript Hello World - ECS Ready</p>
 
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
             <h2 className="text-sm font-semibold text-gray-700 mb-2">System Info</h2>
@@ -23,9 +23,7 @@ export default function HomePage() {
             >
               Health Check
             </a>
-            <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
-              Docker Ready ✅
-            </button>
+            <div className="bg-green-100 text-green-700 px-4 py-2 rounded-lg">ECS Ready ✅</div>
           </div>
         </div>
       </div>
