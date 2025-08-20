@@ -7,5 +7,8 @@ export async function GET() {
     environment: process.env.NODE_ENV || "development",
     port: process.env.PORT || "3000",
     service: "typescript-hello-world",
+    nodeVersion: process.version,
+    platform: process.platform,
+    arch: process.arch,
   })
 }
