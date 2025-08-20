@@ -5,8 +5,8 @@ FROM base AS deps
 RUN apk add --no-cache libc6-compat curl
 WORKDIR /app
 
-COPY package.json package-lock.json* ./
-RUN npm ci --only=production
+COPY package.json ./
+RUN npm install
 
 # Build stage
 FROM base AS builder
@@ -25,9 +25,10 @@ ENV NODE_ENV=production
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nodeuser
 
+COPY package.json ./
+RUN npm install --only=production && npm cache clean --force
+
 COPY --from=builder --chown=nodeuser:nodejs /app/dist ./dist
-COPY --from=builder --chown=nodeuser:nodejs /app/node_modules ./node_modules
-COPY --from=builder --chown=nodeuser:nodejs /app/package.json ./
 
 USER nodeuser
 
